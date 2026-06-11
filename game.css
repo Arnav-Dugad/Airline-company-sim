@@ -1,0 +1,179 @@
+/* ============================================================
+   SkyTycoon — Game Dashboard Styles
+   ============================================================ */
+
+.game-top{
+  position:sticky;top:0;z-index:40;backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(7,11,24,.94),rgba(7,11,24,.7));
+  border-bottom:1px solid var(--stroke);
+}
+.game-top-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;height:64px}
+.airline-id{display:flex;align-items:center;gap:12px;min-width:0}
+.airline-logo{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-weight:900;color:#fff;flex-shrink:0}
+.airline-id .name{font-weight:800;font-size:16px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.airline-id .sub{font-size:11.5px;color:var(--muted)}
+
+.hud{display:flex;gap:18px;align-items:center}
+.hud .kpi{text-align:right}
+.hud .kpi b{display:block;font-size:16px;font-weight:900;line-height:1.1}
+.hud .kpi span{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+.next-week{white-space:nowrap}
+
+/* Layout */
+.game-wrap{max-width:1240px;margin:0 auto;padding:18px 16px 60px}
+
+/* Tabs */
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:6px;background:var(--panel);
+  border:1px solid var(--stroke);border-radius:14px;margin-bottom:18px;backdrop-filter:blur(8px)}
+.tabs::-webkit-scrollbar{height:0}
+.tab{border:none;background:transparent;color:var(--muted);font-weight:700;font-size:14px;
+  padding:10px 16px;border-radius:10px;white-space:nowrap;transition:.15s;flex-shrink:0}
+.tab:hover{color:var(--txt)}
+.tab.active{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 6px 16px rgba(37,99,235,.4)}
+
+.panel{background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius);
+  padding:22px;backdrop-filter:blur(10px);margin-bottom:18px}
+.panel h3{font-size:18px;margin-bottom:4px}
+.panel .desc{color:var(--muted);font-size:13.5px;margin-bottom:18px}
+
+/* KPI cards */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:18px}
+.kpi-card{background:rgba(8,12,24,.5);border:1px solid var(--stroke);border-radius:14px;padding:16px}
+.kpi-card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted)}
+.kpi-card .val{font-size:24px;font-weight:900;margin-top:4px}
+.kpi-card .sub2{font-size:12px;margin-top:2px;color:var(--muted)}
+
+/* Bars */
+.meter{height:9px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin-top:8px}
+.meter > i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--brand-2),var(--accent))}
+
+/* Tables / list rows */
+.rows{display:flex;flex-direction:column;gap:10px}
+.row-item{display:flex;align-items:center;gap:14px;background:rgba(8,12,24,.45);
+  border:1px solid var(--stroke);border-radius:14px;padding:12px 14px}
+.row-item .thumb{width:84px;height:54px;border-radius:9px;object-fit:cover;background:#0a1020;flex-shrink:0}
+.row-item .grow{flex:1;min-width:0}
+.row-item .ttl{font-weight:800;font-size:14.5px}
+.row-item .meta{font-size:12.5px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap;margin-top:3px}
+.row-item .meta b{color:var(--txt)}
+.row-actions{display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
+
+/* Market grid */
+.market-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.ac-card{background:rgba(8,12,24,.5);border:1px solid var(--stroke);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.ac-card .ph{aspect-ratio:16/9;background:#0a1020;overflow:hidden}
+.ac-card .ph img{width:100%;height:100%;object-fit:cover}
+.ac-card .body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.ac-card .maker{font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--brand-2);font-weight:800}
+.ac-card .model{font-weight:800;font-size:16px}
+.ac-card .blurb{font-size:12px;color:var(--muted);flex:1}
+.spec-line{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12px;color:var(--muted)}
+.spec-line b{color:var(--txt)}
+.ac-buy{display:flex;gap:8px;margin-top:4px}
+.ac-buy .btn{flex:1;padding:9px;font-size:12.5px}
+
+/* Forms inline */
+.inline-form{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end}
+.inline-form .field{margin:0}
+.inline-form .field input,.inline-form .field select{padding:11px 12px}
+
+/* Log */
+.log-entry{display:flex;gap:12px;padding:11px 14px;border-radius:12px;background:rgba(8,12,24,.45);
+  border:1px solid var(--stroke);margin-bottom:9px;font-size:13.5px}
+.log-entry .wk{font-size:11px;color:var(--muted);min-width:54px;font-weight:700}
+.log-entry.good{border-left:3px solid var(--good)}
+.log-entry.bad{border-left:3px solid var(--bad)}
+.log-entry.neutral{border-left:3px solid var(--muted)}
+
+/* Competitor rows */
+.comp-row{display:flex;align-items:center;gap:12px;background:rgba(8,12,24,.45);
+  border:1px solid var(--stroke);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+.comp-badge{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-weight:900;color:#fff;flex-shrink:0}
+
+/* Empty state */
+.empty{text-align:center;padding:40px 16px;color:var(--muted)}
+.empty .big{font-size:42px;margin-bottom:10px}
+
+/* Toast */
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120%);
+  background:var(--panel-solid);border:1px solid var(--stroke);border-radius:14px;
+  padding:14px 20px;font-weight:600;font-size:14px;box-shadow:var(--shadow);z-index:100;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1);max-width:90vw}
+#toast.show{transform:translateX(-50%) translateY(0)}
+#toast.good{border-color:rgba(52,211,153,.5)}
+#toast.bad{border-color:rgba(248,113,113,.5)}
+
+/* Modal */
+.modal-back{position:fixed;inset:0;background:rgba(3,6,16,.7);backdrop-filter:blur(4px);
+  display:none;place-items:center;z-index:90;padding:16px}
+.modal-back.show{display:grid}
+.modal{background:var(--panel-solid);border:1px solid var(--stroke);border-radius:20px;
+  padding:26px;max-width:460px;width:100%;box-shadow:var(--shadow)}
+.modal h3{font-size:20px;margin-bottom:8px}
+.modal p{color:var(--muted);font-size:14px;margin-bottom:18px}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+
+/* Sparkline */
+.spark{display:flex;align-items:flex-end;gap:3px;height:60px;margin-top:10px}
+.spark i{flex:1;background:linear-gradient(180deg,var(--brand-2),rgba(14,165,233,.2));border-radius:3px 3px 0 0;min-height:3px}
+
+/* World / route map */
+.mapwrap{border-radius:14px;overflow:hidden;border:1px solid var(--stroke)}
+.worldmap{width:100%;height:auto;display:block;background:
+  radial-gradient(800px 400px at 70% 0%, rgba(37,99,235,.18), transparent 60%), #070d1c}
+
+/* Achievements */
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.ach{display:flex;align-items:center;gap:12px;background:rgba(8,12,24,.45);border:1px solid var(--stroke);
+  border-radius:14px;padding:12px 14px;opacity:.55;transition:.2s}
+.ach.got{opacity:1;border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.07)}
+.ach-ico{font-size:28px;width:42px;text-align:center;filter:grayscale(1)}
+.ach.got .ach-ico{filter:none}
+.ach-ttl{font-weight:800;font-size:14px}
+.ach-desc{font-size:12px;color:var(--muted)}
+
+/* Smart alerts */
+.alerts{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.alert-chip{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.4);border-radius:12px;padding:10px 14px;font-size:13.5px;color:#fde68a}
+.alert-chip button{flex-shrink:0}
+
+/* Bulk action bars */
+.bulk-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.buy-controls{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:13.5px;color:var(--muted)}
+.buy-controls input[type=number]{width:80px;padding:8px 10px;border-radius:10px;border:1px solid var(--stroke);background:rgba(8,12,24,.7);color:var(--txt);margin-left:6px}
+.buy-controls .chk{display:flex;align-items:center;gap:8px;cursor:pointer}
+.buy-controls .chk input{width:17px;height:17px}
+
+/* Bulk pricing toolbar */
+.bulk-price{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.bulk-price select,.bulk-price input{padding:9px 11px;border-radius:10px;border:1px solid var(--stroke);background:rgba(8,12,24,.7);color:var(--txt);font-size:13.5px}
+.bulk-price input{width:90px}
+
+/* Analytics bars */
+.bars{display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:120px 1fr auto;gap:10px;align-items:center;font-size:13px}
+.bar-lab{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{height:14px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden}
+.bar-track i{display:block;height:100%;border-radius:99px}
+.pos-bar{background:linear-gradient(90deg,var(--good),#0ea5e9)}
+.neg-bar{background:linear-gradient(90deg,#f59e0b,#ef4444)}
+.bar-val{font-weight:800;white-space:nowrap}
+
+@media(max-width:760px){
+  .hud .kpi.hide-sm{display:none}
+  .inline-form{grid-template-columns:1fr 1fr}
+  .inline-form .full{grid-column:1/-1}
+  .row-item .thumb{width:64px;height:42px}
+  .ach-grid{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:84px 1fr auto;font-size:12px}
+  .bulk-bar .btn,.bulk-price .btn{flex:1 1 auto}
+  #ffBtn{padding:8px 10px}
+}
+@media(max-width:480px){
+  .bulk-price input,.bulk-price select{flex:1 1 40%}
+}
+@media(max-width:480px){
+  .airline-id .sub{display:none}
+  .game-top-inner{height:58px}
+}
