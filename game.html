@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight Deck — SkyTycoon | Arnav Game Studios</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/game.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+<body>
+<div class="stars"></div>
+
+<!-- Top HUD -->
+<header class="game-top">
+  <div class="game-wrap game-top-inner" style="padding-top:0;padding-bottom:0">
+    <div class="airline-id" id="airlineId" title="Account menu" style="cursor:pointer">
+      <div class="airline-logo" id="alLogo">AR</div>
+      <div>
+        <div class="name" id="alName">Airline</div>
+        <div class="sub" id="alSub">Hub · Week</div>
+      </div>
+    </div>
+    <div class="hud">
+      <div class="kpi"><b id="hudCash">$0M</b><span>Cash</span></div>
+      <div class="kpi hide-sm"><b id="hudProfit">$0M</b><span>Last Week</span></div>
+      <div class="kpi hide-sm"><b id="hudRep">50</b><span>Reputation</span></div>
+      <button class="btn ghost sm next-week" id="ffBtn" title="Fast-forward 4 weeks">⏩</button>
+      <button class="btn next-week" id="nextWeekBtn">Next Week ▶</button>
+    </div>
+  </div>
+</header>
+
+<main class="game-wrap">
+  <!-- Tab bar -->
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-tab="overview">📊 Overview</button>
+    <button class="tab" data-tab="market">🛒 Buy Aircraft</button>
+    <button class="tab" data-tab="fleet">🛩️ Fleet</button>
+    <button class="tab" data-tab="routes">🗺️ Routes</button>
+    <button class="tab" data-tab="staff">👥 Staff</button>
+    <button class="tab" data-tab="growth">📣 Growth</button>
+    <button class="tab" data-tab="analytics">📈 Analytics</button>
+    <button class="tab" data-tab="missions">🎯 Missions</button>
+    <button class="tab" data-tab="finance">💰 Finance</button>
+    <button class="tab" data-tab="rivals">🏆 Rivals</button>
+    <button class="tab" data-tab="log">📰 News</button>
+  </div>
+
+  <div id="view"></div>
+</main>
+
+<!-- Toast + Modal -->
+<div id="toast"></div>
+<div class="modal-back" id="modalBack">
+  <div class="modal">
+    <h3 id="modalTitle">Title</h3>
+    <p id="modalBody">Body</p>
+    <div class="modal-actions" id="modalActions"></div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/events.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SkyTycoon — build a global airline empire. A premium airline simulation game by Arnav Game Studios.">
+<title>SkyTycoon ✈️ — Airline Empire Simulator | Arnav Game Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+<body>
+<div class="stars"></div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="logo">✈️</span>
+      <span><b>SkyTycoon</b><small>Arnav Game Studios</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#fleet">Aircraft</a>
+      <a href="#how">How to Play</a>
+      <a href="#rivals">Rivals</a>
+      <a class="btn sm" href="auth.html">Play Free ✈️</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero wrap">
+  <span class="tag"><span class="dot"></span> Live Simulation · 26 Real Aircraft · 14 Real Rival Airlines</span>
+  <h1>Build the world's<br>greatest airline.</h1>
+  <p class="sub">Found your carrier, buy real jets from Airbus, Boeing, Embraer &amp; more, open a
+     global route network, hire crews, run marketing, complete missions, and outmaneuver Emirates
+     and Delta while surviving fuel spikes, strikes and economic storms. Welcome to <b>SkyTycoon</b>.</p>
+  <div class="hero-cta">
+    <a class="btn gold" href="auth.html">🚀 Start Your Airline</a>
+    <a class="btn ghost" href="#how">How it works</a>
+  </div>
+  <div class="plane-sweep">🛫</div>
+  <div class="stats-strip">
+    <div class="stat-pill"><b>26</b><span>Real Aircraft</span></div>
+    <div class="stat-pill"><b>42</b><span>Global Airports</span></div>
+    <div class="stat-pill"><b>14</b><span>Rival Airlines</span></div>
+    <div class="stat-pill"><b>14+</b><span>Random Events</span></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="wrap">
+  <div class="section-head">
+    <h2>A simulation with real teeth</h2>
+    <p>Every decision moves your cash, reputation and market share. This isn't a clicker — it's an economy.</p>
+  </div>
+  <div class="grid cols-3">
+    <div class="card"><div class="ico">🛩️</div><h3>26 Real Aircraft</h3><p>Order actual jets — A320neo, A350, 787 Dreamliner, 777X, A380 and more — each with real range, capacity and fuel economy, plus upgrades like WiFi, premium seats and eco winglets.</p></div>
+    <div class="card"><div class="ico">🗺️</div><h3>Global Network &amp; Map</h3><p>Open routes between 42 real airports from multiple bases, with Budget, Standard or Premium service classes — and watch your network grow on a live world map.</p></div>
+    <div class="card"><div class="ico">👥</div><h3>Staff &amp; Operations</h3><p>Hire pilots, cabin crew, engineers and ground staff. Understaffing throttles revenue and reputation — run a tight, well-crewed airline.</p></div>
+    <div class="card"><div class="ico">📣</div><h3>Marketing &amp; Strategy</h3><p>Run ad campaigns, join global alliances, launch a frequent-flyer programme, build airport lounges, auto-maintain your fleet, and let smart auto-pricing optimise every fare.</p></div>
+    <div class="card"><div class="ico">🎯</div><h3>Missions &amp; Achievements</h3><p>Complete 12 objectives for cash &amp; reputation rewards, and unlock 10 permanent achievement badges as your empire grows.</p></div>
+    <div class="card"><div class="ico">🌩️</div><h3>Events &amp; Seasons</h3><p>Fuel shocks, strikes, outbreaks, booms, volcanic ash and lucky breaks — plus seasonal demand peaks — keep every game unpredictable.</p></div>
+    <div class="card"><div class="ico">🏆</div><h3>14 Real Rivals</h3><p>Compete against Emirates, Delta, Singapore, Lufthansa, British Airways, Qatar and more as they grow and fight for market share.</p></div>
+    <div class="card"><div class="ico">📈</div><h3>Deep Economy</h3><p>Fuel, payroll, maintenance, leasing, overhead and loan interest all interact. Track cash, company valuation and market share over time.</p></div>
+    <div class="card"><div class="ico">☁️</div><h3>Cloud Saves</h3><p>Sign in with email or Google. Your entire empire is stored securely with Firebase and follows you across devices.</p></div>
+  </div>
+</section>
+
+<!-- FLEET SHOWCASE (populated by JS) -->
+<section id="fleet" class="wrap">
+  <div class="section-head">
+    <h2>Fly the real thing</h2>
+    <p>From regional turboprops to the double-decker A380 — order the metal that fits your strategy.</p>
+  </div>
+  <div class="fleet-rail" id="fleetRail"></div>
+</section>
+
+<!-- HOW TO PLAY -->
+<section id="how" class="wrap">
+  <div class="section-head"><h2>How to play</h2><p>Four steps from startup to global empire.</p></div>
+  <div class="grid cols-4">
+    <div class="card"><div class="ico">①</div><h3>Found It</h3><p>Name your airline, pick a hub, choose starting capital &amp; difficulty.</p></div>
+    <div class="card"><div class="ico">②</div><h3>Buy &amp; Crew</h3><p>Purchase or lease real aircraft, then hire pilots and crew to fly them.</p></div>
+    <div class="card"><div class="ico">③</div><h3>Open Routes</h3><p>Fly city pairs from your bases, set service class &amp; price for the best yield.</p></div>
+    <div class="card"><div class="ico">④</div><h3>Grow Empire</h3><p>Advance weeks, run marketing, complete missions, weather events &amp; expand.</p></div>
+  </div>
+</section>
+
+<!-- RIVALS -->
+<section id="rivals" class="wrap">
+  <div class="section-head"><h2>Your competition is real</h2><p>These carriers don't sit still. Out-grow them or get squeezed out.</p></div>
+  <div class="grid cols-4" id="rivalGrid"></div>
+</section>
+
+<!-- CTA -->
+<section class="wrap" style="text-align:center">
+  <div class="card" style="padding:46px">
+    <h2 style="font-size:clamp(24px,4vw,36px);font-weight:900">Ready for takeoff?</h2>
+    <p class="muted" style="max-width:480px;margin:12px auto 24px">Create your airline in under a minute. Free to play, right in your browser.</p>
+    <a class="btn gold" href="auth.html">✈️ Launch SkyTycoon</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© 2026 <span class="studio">Arnav Game Studios</span> · SkyTycoon. A simulation for entertainment.</div>
+    <div class="muted">Aircraft imagery via Wikimedia Commons · Airlines named for realism, not affiliation.</div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script>
+  /* Local money formatter (landing page only loads data.js) */
+  function fmtMoney(m){const n=Number(m)||0;return Math.abs(n)>=1000?"$"+(n/1000).toFixed(2)+"B":"$"+n.toFixed(1)+"M";}
+
+  /* Populate fleet showcase (a varied selection) */
+  const rail = document.getElementById('fleetRail');
+  const showcaseIds = ['a320neo','b787-9','a350-1000','b777-9','a380-800','b737max8','e190-e2','atr72-600','a321xlr','b747-8i','a330-900','b787-10'];
+  showcaseIds.map(id=>getAircraft(id)).filter(Boolean).forEach(a=>{
+    const el = document.createElement('div');
+    el.className='plane-card';
+    el.innerHTML = `
+      <div class="ph"><img loading="lazy" src="${a.img}" alt="${a.maker} ${a.model}"
+           onerror="this.onerror=null;this.src=planePlaceholder('${a.maker} ${a.model}')"></div>
+      <div class="body">
+        <div class="maker">${a.maker}</div>
+        <div class="model">${a.model}</div>
+        <div class="specs">
+          <span><b>${a.seats}</b> seats</span>
+          <span><b>${a.range.toLocaleString()}</b> nm</span>
+          <span><b>$${a.price}M</b></span>
+        </div>
+      </div>`;
+    rail.appendChild(el);
+  });
+
+  /* Populate rivals */
+  const rg = document.getElementById('rivalGrid');
+  COMPETITORS.forEach(c=>{
+    const ap = getAirport(c.hub);
+    const el = document.createElement('div');
+    el.className='card';
+    el.innerHTML = `
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:42px;height:42px;border-radius:12px;background:${c.color};display:grid;place-items:center;font-weight:900;color:#fff">
+          ${c.name[0]}
+        </div>
+        <div>
+          <h3 style="margin:0;font-size:16px">${c.name}</h3>
+          <span class="muted" style="font-size:12.5px">Hub ${c.hub} · ${ap?ap.city:''}</span>
+        </div>
+      </div>
+      <div class="specs" style="display:flex;gap:14px;margin-top:14px;font-size:12.5px;color:var(--muted)">
+        <span>Strength <b style="color:var(--txt)">${c.strength}</b></span>
+        <span>War-chest <b style="color:var(--txt)">${fmtMoney(c.cash)}</b></span>
+      </div>`;
+    rg.appendChild(el);
+  });
+</script>
+</body>
+</html>
