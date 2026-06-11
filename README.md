@@ -1,6 +1,8 @@
 # ✈️ SkyTycoon — Airline Empire Simulator
 **by Arnav Game Studios**
 
+https://arnav-dugad.github.io/Airline-company-sim/
+
 A premium, browser-based airline tycoon game. Found a carrier, buy **real aircraft**
 from real manufacturers (Airbus, Boeing, Embraer, Bombardier, ATR), open routes between
 24 real airports, battle 8 real rival airlines, survive random world events, and grow a
